@@ -1,0 +1,21 @@
+{
+  "name": "cypress-jest-adapter-issue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test:run": "cypress run",
+    "test:open": "cypress open",
+    "test:compile": "tsc --project cypress/tsconfig.json",
+    "test:compile:watch": "tsc --watch --project test/tsconfig.json",
+    "test": "npm-run-all -s test:compile test:run",
+    "test:watch": "npm-run-all -p test:compile:watch test:open"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "cypress": "^3.2.0",
+    "cypress-jest-adapter": "^0.0.1",
+    "jest": "^24.5.0",
+    "typescript": "3.2.4"
+  }
+}
